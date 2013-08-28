@@ -1,0 +1,16 @@
+#! /bin/sh
+
+#
+# Script to give the appropriate compiler flags and linker flags
+# to use when building code that uses libpcap.
+#
+case "$1" in
+
+--cflags)
+	echo "-I /home/xxha/tools/pcap/arm_lib/include"
+	;;
+
+--libs)
+	echo "-L /home/xxha/tools/pcap/arm_lib/lib -lpcap "
+	;;
+esac
